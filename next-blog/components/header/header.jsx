@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Image from 'next/image'
+import Link from 'next/link'
 import profilePic from '../../public/images/profile.jpg'
 
 const name = 'Pablo Rubianes';
@@ -21,7 +22,6 @@ export default function Header ({home}) {
         ) : (
           <>
             <Link href="/">
-              <a>
                 <Image
                   priority
                   src={profilePic}
@@ -30,11 +30,10 @@ export default function Header ({home}) {
                   width={108}
                   alt={name}
                 />
-              </a>
             </Link>
             <h2 className={'headingLg'}>
-              <Link href="/">
-                <a className={'colorInherit'}>{name}</a>
+              <Link href="/" className={'colorInherit'}>
+                {name}
               </Link>
             </h2>
           </>
